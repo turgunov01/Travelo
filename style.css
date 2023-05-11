@@ -280,6 +280,9 @@ ul {
 }
 
 @media (max-width: 600px) {
+  .parallax {
+    transition: 0.2s;
+  }
   .nav-list {
     display: none;
   }
