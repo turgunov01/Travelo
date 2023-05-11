@@ -1,19 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive 3D Parallax Website</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive 3D Parallax Website</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+  </head>
 
-<body>
+  <body>
 
+    <header class="header">
+      <nav class="nav">
+        <img src="/img/logo.png" class="logo" alt="Travello">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign up</a>
+          </li>
+          <li class="search">
+            <a href="#">
+              <i style="color: white;" class="fa-solid fa-2x
+                fa-magnifying-glass"></i>
+            </a>
+          </li>
+          <li class="hamburger">
+            <a href="#">
+              <div class="bar"></div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <script src="js/gsap.min.js"></script>
-  <script src="js/app.js" defer></script>
-</body>
+    <main class="main">
+      <div class="vignette"></div>
+      <img src="img/background.png" data-speedX="0.3" data-speedy="0.1" class="parallax
+        background" alt="">
+      <img src="img/fog_7.png" class="parallax fog_7" alt="" data-speedX="0.15" data-speedY="0.05">
+      <img src="img/mountain_10.png" class="parallax mountain_10" alt=""
+        data-speedX="0.15" data-speedY="0.05">
+      <img src="img/fog_6.png" class="parallax fog_6" alt="" data-speedX="0.15" data-speedY="0.05">
+      <img src="img/mountain_9.png" class="parallax mountain_9" alt=""
+        data-speedX="0.15" data-speedY="0.05">
+      <img src="img/mountain_8.png" class="parallax mountain_8" alt=""
+        data-speedX="0.15" data-speedY="0.05">
+      <img src="img/fog_5.png" class="parallax fog_5" alt="" data-speedX="0.15" data-speedY="0.05">
+      <img src="img/mountain_7.png" class="parallax mountain_7" alt=""
+        data-speedX="0.15" data-speedY="0.05">
+      <div class="text parallax" data-speedX="0.15" data-speedY="0.05">
+        <h2>China</h2>
+        <p>Beijing</p>
+      </div>
+      <img src="img/mountain_6.png" class="mountain_6 parallax" alt=""
+        data-speedX="0.028" data-speedY="0.05">
+      <img src="img/fog_4.png" class="fog_4 parallax" alt="" data-speedX="0.02" data-speedY="0.05">
+      <img src="img/mountain_5.png" class="mountain_5 parallax" alt=""
+        data-speedX="0.014" data-speedY="0.05">
+      <img src="img/fog_3.png" class="fog_3 parallax" alt="" data-speedX="0.01" data-speedY="0.05">
+      <img src="img/mountain_4.png" class="mountain_4 parallax" alt=""
+        data-speedX="0.0142" data-speedY="0.05">
+      <img src="img/mountain_3.png" class="mountain_3 parallax" alt=""
+        data-speedX="0.032" data-speedY="0.05">
+      <img src="img/fog_2.png" class="fog_2 parallax" alt="" data-speedX="0.015" data-speedY="0.05">
+      <img src="img/mountain_2.png" class="mountain_2 parallax" alt=""
+        data-speedX="0.053" data-speedY="0.05">
+      <img src="img/mountain_1.png" class="mountain_1 parallax" alt=""
+        data-speedX="0.051" data-speedY="0.05">
+      <img src="img/sun_rays.png" class="sun_rays parallax" alt=""
+        data-speedX="0.06" data-speedY="0.05">
+      <img src="img/fog_1.png" class="fog_1 parallax" alt="" data-speedX="0.08" data-speedY="0.05">
+    </main>
+
+    <script src="js/gsap.min.js"></script>
+    <script src="js/app.js" defer></script>
+  </body>
 
 </html>
