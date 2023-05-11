@@ -12,7 +12,7 @@ body {
 }
 
 ::selection {
-    background: #0b372dbb;
+  background: #0b372dbb;
 }
 
 html {
@@ -232,7 +232,7 @@ ul {
 
 .mountain_1 {
   left: calc(50% - 80rem);
-  top: calc(50% + 5rem);
+  top: calc(50% + 10rem);
   z-index: 15;
   width: 60rem;
 }
@@ -279,3 +279,36 @@ ul {
   );
 }
 
+@media (max-width: 600px) {
+  .nav-list {
+    display: none;
+  }
+
+  .text h2 {
+    font-size: 5rem;
+  }
+
+  .text p {
+    font-size: 8rem;
+  }
+
+  .mountain_5 {
+    left: calc(50% + 15rem);
+    top: calc(50% + 35rem);
+  }
+
+  .mountain_4 {
+    left: calc(50% - 30rem);
+    top: calc(50% + 30rem);
+  }
+
+  .header .nav {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
