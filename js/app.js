@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const wrapper = document.querySelector('.wrapper')
 
-    wrapper.addEventListener('mousemove', (e) => {
+    window.addEventListener('mousemove', (e) => {
         if (window.innerWidth > 990) {
             xValue = e.clientX - window.innerWidth / 2
             yValue = e.clientY - window.innerHeight / 2
@@ -84,11 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    // btn.addEventListener('click', () => {
-    //     postUser()
-    // })
 
-    wrapper.addEventListener('deviceorientation', (event) => {
+    window.addEventListener('deviceorientation', (event) => {
 
         const x = event.beta | 0
         const y = event.gamma | 0
@@ -96,8 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (window.innerWidth < 990) {
             parallax.forEach(item => {
-                let speedx = item.dataset.speedx * 10;
-                let speedy = item.dataset.speedy * 10;
+                let speedx = item.dataset.speedx;
+                let speedy = item.dataset.speedy;
                 item.style.transform = `translateX(calc(-50% + ${x * speedx}px)) translateY(calc(-50% + ${y * speedy}px))`
             });
         }
