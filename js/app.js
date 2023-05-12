@@ -29,12 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     window.addEventListener('deviceorientation', (event) => {
-        const x = event.beta
-        const y = event.gamma
+        const x = Math.round(event.beta) | 0
+        const y = Math.round(event.gamma) | 0
 
-        for (let j = 0; j < parallax.length; j++) {
-            parallax[i].style.transform = `translateX(calc(-50% + ${-x}px)) translateY(calc(-50% + ${y}px))`
-        }
+        let xAsis = document.querySelector('.x-asis')
+        let yAsis = document.querySelector('.y-asis')
+
+        xAsis.innerHTML = x
+        yAsis.innerHTML = y
+
     })
 
 
