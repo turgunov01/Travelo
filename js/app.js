@@ -34,10 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const x = event.beta | 0
         const y = event.gamma | 0
+        const z = event.alpha | 0
 
-        if(window.innerWidth < 990) {
+        if (window.innerWidth < 990) {
             parallax.forEach(item => {
-                item.style.transform = `translateX(calc(-50% + ${x}px)) translateY(calc(-50% + ${y}px))`
+                item.style.transform = `translateX(calc(-50% + ${x}px)) translateY(calc(-50% + ${y}px)) translateZ(calc(-50% + ${z}px))`
             });
         }
 
