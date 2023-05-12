@@ -87,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('deviceorientation', (event) => {
 
-        const x = event.beta | 0
-        const y = event.gamma | 0
+        const x = event.gamma | 0
+        const y = event.beta | 0
 
 
         if (window.innerWidth < 990) {
