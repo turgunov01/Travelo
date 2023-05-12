@@ -83,6 +83,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     })
+    window.addEventListener('click', (e) => {
+        if (window.innerWidth > 990) {
+            xValue = e.clientX - window.innerWidth / 2
+            yValue = e.clientY - window.innerHeight / 2
+
+
+            for (let i = 0; i < parallax.length; i++) {
+                parallax[i]
+                let speedx = parallax[i].dataset.speedx;
+                let speedy = parallax[i].dataset.speedy;
+                parallax[i].style.transform = `translateX(calc(-50% + ${-xValue * speedx}px)) translateY(calc(-50% + ${yValue * speedy}px))`
+            }
+        }
+    })
 
 
     window.addEventListener('deviceorientation', (event) => {
