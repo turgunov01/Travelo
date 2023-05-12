@@ -15,69 +15,131 @@
 
   <body>
 
-    <header class="header">
-      <nav class="nav">
-        <img src="/img/logo.png" class="logo" alt="Travello">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link login" href="#">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sign up</a>
-          </li>
-          <li class="search">
-            <a href="#">
-              <i style="color: white;" class="fa-solid fa-2x
-                fa-magnifying-glass"></i>
-            </a>
-          </li>
-          <li class="hamburger">
-            <a href="#">
-              <div class="bar"></div>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+          <img src="/img/logo.png" class="logo" alt="Travello">
+          <ul class="nav-list">
+            <li class="nav-item checkAuth">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item checkAuth">
+              <a class="nav-link" href="#">Sign up</a>
+            </li>
+            <li class="search">
+              <a href="#">
+                <i style="color: white;" class="fa-solid fa-2x
+                  fa-magnifying-glass"></i>
+              </a>
+            </li>
+            <li class="hamburger" onclick="getAside()">
+              <a href="#">
+                <div class="bar"></div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-    <main class="main">
-      <div class="vignette"></div>
-      <img src="img/background.png" data-speedX="0.3" data-speedy="0.1" class="parallax
-        background" alt="">
-      <img src="img/fog_7.png" class="parallax fog_7" alt="" data-speedX="0.15" data-speedY="0.05">
-      <img src="img/mountain_10.png" class="parallax mountain_10" alt=""
-        data-speedX="0.15" data-speedY="0.05">
-      <img src="img/fog_6.png" class="parallax fog_6" alt="" data-speedX="0.15" data-speedY="0.05">
-      <img src="img/mountain_9.png" class="parallax mountain_9" alt=""
-        data-speedX="0.15" data-speedY="0.05">
-      <img src="img/mountain_8.png" class="parallax mountain_8" alt=""
-        data-speedX="0.15" data-speedY="0.05">
-      <img src="img/fog_5.png" class="parallax fog_5" alt="" data-speedX="0.15" data-speedY="0.05">
-      <img src="img/mountain_7.png" class="parallax mountain_7" alt=""
-        data-speedX="0.15" data-speedY="0.05">
-      <div class="text parallax" data-speedX="0.15" data-speedY="0.05">
-        <h2>China</h2>
-        <p>Beijing</p>
+      <main class="main">
+        <div class="vignette"></div>
+        <img src="img/background.png" data-speedX="0.3" data-speedy="0.1"
+          class="parallax
+          background" alt="">
+        <img src="img/fog_7.png" class="parallax fog_7" alt=""
+          data-speedX="0.15" data-speedY="0.05">
+        <img src="img/mountain_10.png" class="parallax mountain_10" alt=""
+          data-speedX="0.15" data-speedY="0.05">
+        <img src="img/fog_6.png" class="parallax fog_6" alt=""
+          data-speedX="0.15" data-speedY="0.05">
+        <img src="img/mountain_9.png" class="parallax mountain_9" alt=""
+          data-speedX="0.15" data-speedY="0.05">
+        <img src="img/mountain_8.png" class="parallax mountain_8" alt=""
+          data-speedX="0.15" data-speedY="0.05">
+        <img src="img/fog_5.png" class="parallax fog_5" alt=""
+          data-speedX="0.15" data-speedY="0.05">
+        <img src="img/mountain_7.png" class="parallax mountain_7" alt=""
+          data-speedX="0.15" data-speedY="0.05">
+        <div class="text parallax" data-speedX="0.15" data-speedY="0.05">
+          <h2>China</h2>
+          <p>Beijing</p>
+        </div>
+        <img src="img/mountain_6.png" class="mountain_6 parallax" alt=""
+          data-speedX="0.07" data-speedY="0.05">
+        <img src="img/fog_4.png" class="fog_4 parallax" alt=""
+          data-speedX="0.02" data-speedY="0.05">
+        <img src="img/mountain_5.png" class="mountain_5 parallax" alt=""
+          data-speedX="0.014" data-speedY="0.05">
+        <img src="img/fog_3.png" class="fog_3 parallax" alt=""
+          data-speedX="0.01" data-speedY="0.05">
+        <img src="img/mountain_4.png" class="mountain_4 parallax" alt=""
+          data-speedX="0.0142" data-speedY="0.05">
+        <img src="img/mountain_3.png" class="mountain_3 parallax" alt=""
+          data-speedX="0.032" data-speedY="0.05">
+        <img src="img/fog_2.png" class="fog_2 parallax" alt=""
+          data-speedX="0.015" data-speedY="0.05">
+        <img src="img/mountain_2.png" class="mountain_2 parallax" alt=""
+          data-speedX="0.053" data-speedY="0.05">
+        <img src="img/mountain_1.png" class="mountain_1 parallax" alt=""
+          data-speedX="0.051" data-speedY="0.05">
+        <img src="img/sun_rays.png" class="sun_rays parallax" alt=""
+          data-speedX="0.06" data-speedY="0.05">
+        <img src="img/fog_1.png" class="fog_1 parallax" alt=""
+          data-speedX="0.08" data-speedY="0.05">
+      </main>
+    </div>
+
+    <div class="login-modal active">
+      <div class="login-box">
+        <div class="login-title">
+          <img src="./img/logo.png" class="login-logo" alt="">
+        </div>
+        <form class="login-form">
+          <div class="login-input">
+            <label for="login">Login</label>
+            <input type="text" id="login" placeholder="Input text">
+          </div>
+          <div class="login-input">
+            <label for="password">Password</label>
+            <input type="text" id="password" placeholder="Input text">
+          </div>
+        </form>
+        <div class="login-form">
+          <button class="login-button">Login</button>
+          <button class="sign-up">Sign up</button>
+        </div>
       </div>
-      <img src="img/mountain_6.png" class="mountain_6 parallax" alt=""
-        data-speedX="0.07" data-speedY="0.05">
-      <img src="img/fog_4.png" class="fog_4 parallax" alt="" data-speedX="0.02" data-speedY="0.05">
-      <img src="img/mountain_5.png" class="mountain_5 parallax" alt=""
-        data-speedX="0.014" data-speedY="0.05">
-      <img src="img/fog_3.png" class="fog_3 parallax" alt="" data-speedX="0.01" data-speedY="0.05">
-      <img src="img/mountain_4.png" class="mountain_4 parallax" alt=""
-        data-speedX="0.0142" data-speedY="0.05">
-      <img src="img/mountain_3.png" class="mountain_3 parallax" alt=""
-        data-speedX="0.032" data-speedY="0.05">
-      <img src="img/fog_2.png" class="fog_2 parallax" alt="" data-speedX="0.015" data-speedY="0.05">
-      <img src="img/mountain_2.png" class="mountain_2 parallax" alt=""
-        data-speedX="0.053" data-speedY="0.05">
-      <img src="img/mountain_1.png" class="mountain_1 parallax" alt=""
-        data-speedX="0.051" data-speedY="0.05">
-      <img src="img/sun_rays.png" class="sun_rays parallax" alt=""
-        data-speedX="0.06" data-speedY="0.05">
-      <img src="img/fog_1.png" class="fog_1 parallax" alt="" data-speedX="0.08" data-speedY="0.05">
-    </main>
+    </div>
+
+    <aside class="aside">
+      <span class="aside-title">
+        <img src="./img/logo.png" class="aside-logo" alt="">
+        <div class="close" onclick="getAside()">
+          <div class="hamburger"></div>
+        </div>
+      </span>
+      <div class="aside-container">
+        <ul class="aside-list">
+          <li class="aside-item">
+            <a href="#" class="aside-link left">Home</a>
+          </li>
+          <li class="aside-item">
+            <a href="home.html" class="aside-link left">Animations</a>
+          </li>
+          <li class="aside-item">
+            <a href="#" class="aside-link left">Contact</a>
+          </li>
+          <div class="flex">
+            <li class="aside-item">
+              <a href="#" class="aside-link inIn">Login</a>
+            </li>
+            <li class="aside-item">
+              <a href="#" class="aside-link inUp">Sign up</a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </aside>
 
     <script src="js/gsap.min.js"></script>
     <script src="js/app.js" defer></script>
