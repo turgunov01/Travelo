@@ -15,28 +15,31 @@ document.addEventListener('DOMContentLoaded', () => {
     getCurrentClientPosition(event)
 
     window.addEventListener('mousemove', (e) => {
-        xValue = e.clientX - window.innerWidth / 2
-        yValue = e.clientY - window.innerHeight / 2
+        if (window.innerWidth > 990) {
+            xValue = e.clientX - window.innerWidth / 2
+            yValue = e.clientY - window.innerHeight / 2
 
 
-        for (let i = 0; i < parallax.length; i++) {
-            parallax[i]
-            let speedx = parallax[i].dataset.speedx;
-            let speedy = parallax[i].dataset.speedy;
-            parallax[i].style.transform = `translateX(calc(-50% + ${-xValue * speedx}px)) translateY(calc(-50% + ${yValue * speedy}px))`
+            for (let i = 0; i < parallax.length; i++) {
+                parallax[i]
+                let speedx = parallax[i].dataset.speedx;
+                let speedy = parallax[i].dataset.speedy;
+                parallax[i].style.transform = `translateX(calc(-50% + ${-xValue * speedx}px)) translateY(calc(-50% + ${yValue * speedy}px))`
+            }
         }
     })
 
 
     window.addEventListener('deviceorientation', (event) => {
+
         const x = Math.round(event.beta) | 0
         const y = Math.round(event.gamma) | 0
 
-        let xAsis = document.querySelector('.x-asis')
-        let yAsis = document.querySelector('.y-asis')
-
-        xAsis.innerHTML = x
-        yAsis.innerHTML = y
+        if(window.innerWidth < 990) {
+            parallax.forEach(item => {
+                item.style.transform = `translateX(calc(-50% + ${x}px)) translateY(calc(-50% + ${y}px))`
+            });
+        }
 
     })
 
