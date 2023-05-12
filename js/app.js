@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             parallax.forEach(item => {
                 let speedx = item.dataset.speedx * 10;
                 let speedy = item.dataset.speedy * 10;
-                item.style.transform = `translateX(calc(-50% + ${-x * speedx}px)) translateY(calc(-50% + ${-y * speedy}px))`
+                item.style.transform = `translateX(calc(-50% + ${x * speedx}px)) translateY(calc(-50% + ${y * speedy}px))`
             });
         }
 
