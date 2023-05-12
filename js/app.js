@@ -1,5 +1,5 @@
-const modal = document.querySelector('.login-modal')
-let btn = document.querySelector('.login-button')
+// const modal = document.querySelector('.login-modal')
+// let btn = document.querySelector('.login-button')
 
 function getUserToken() {
     const admin = sessionStorage.getItem('Admin')
@@ -8,14 +8,14 @@ function getUserToken() {
     let checkAuth = document.querySelectorAll('.checkAuth')
 
     if (admin && pass) {
-        modal.classList.remove('active')
+        // modal.classList.remove('active')
         checkAuth.forEach((item) => {
             item.hidden = true
         })
     }
 
     if (!admin || !pass) {
-        modal.classList.add('active')
+        // modal.classList.add('active')
 
         checkAuth.forEach((item) => {
             item.hidden = false
@@ -84,9 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    btn.addEventListener('click', () => {
-        postUser()
-    })
+    // btn.addEventListener('click', () => {
+    //     postUser()
+    // })
 
     wrapper.addEventListener('deviceorientation', (event) => {
 
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             parallax.forEach(item => {
                 let speedx = item.dataset.speedx * 10;
                 let speedy = item.dataset.speedy * 10;
-                item.style.transform = `translateX(calc(-50% + ${x * speedx}px)) translateY(calc(-50% + ${y * speedy}px))`
+                item.style.transform = `translateX(calc(-50% + ${-x * speedx}px)) translateY(calc(-50% + ${-y * speedy}px))`
             });
         }
 
@@ -124,4 +124,5 @@ function animateTextLeft(child, par) {
         }, 1000);
     }
 }
+
 
