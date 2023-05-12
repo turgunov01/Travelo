@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let yValue = 0
 
     function getCurrentClientPosition(e) {
-        xValue = e.clientX
-        yValue = e.clientY
-        console.log(xValue, yValue)
+
     }
 
     const parallax = document.querySelectorAll('.parallax')
@@ -16,17 +14,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     getCurrentClientPosition(event)
 
-
     window.addEventListener('mousemove', (e) => {
-        let once = 0
         xValue = e.clientX - window.innerWidth / 2
         yValue = e.clientY - window.innerHeight / 2
 
 
         for (let i = 0; i < parallax.length; i++) {
+            parallax[i]
             let speedx = parallax[i].dataset.speedx;
             let speedy = parallax[i].dataset.speedy;
             parallax[i].style.transform = `translateX(calc(-50% + ${-xValue * speedx}px)) translateY(calc(-50% + ${yValue * speedy}px))`
+        }
+    })
+
+
+    window.addEventListener('deviceorientation', (event) => {
+        const x = event.beta
+        const y = event.gamma
+
+        for (let j = 0; j < parallax.length; j++) {
+            parallax[i].style.transform = `translateX(calc(-50% + ${-x}px)) translateY(calc(-50% + ${y}px))`
         }
     })
 
