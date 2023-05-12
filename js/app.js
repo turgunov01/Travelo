@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('deviceorientation', (event) => {
 
-        const x = Math.round(event.beta) | 0
-        const y = Math.round(event.gamma) | 0
+        const x = event.beta | 0
+        const y = event.gamma | 0
 
         if(window.innerWidth < 990) {
             parallax.forEach(item => {
