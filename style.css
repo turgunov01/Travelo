@@ -119,7 +119,6 @@ ul {
 }
 
 .main {
-  background: green;
   height: 100svh;
   width: 100vw;
   overflow: hidden;
@@ -340,7 +339,7 @@ ul {
   width: 40rem;
   height: 100vh;
   z-index: 999999;
-  background: rgba(255, 255, 255, 0.404);
+  background: rgba(255, 255, 255);
   backdrop-filter: blur(10px);
   top: 0;
   right: -5%;
@@ -560,5 +559,28 @@ login-modal {
   width: 100%;
   padding-left: 7rem;
   align-items: flex-end;
+}
+
+
+
+
+
+
+/* Home */
+
+.bg-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 3000px;
+  transform: translate(-50%, -50%);
+  filter: brightness(-100);
+}
+
+.boy-image {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
 }
 
