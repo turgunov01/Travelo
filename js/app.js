@@ -137,3 +137,15 @@ function animateTextLeft(child, par) {
 }
 
 
+const swiper = new Swiper(".mySwiper", {
+    direction: "vertical",
+    slidesPerView: 1,
+    mousewheel: {
+        forceToAxis: true,
+        sensitivity: 1,
+        releaseOnEdges: true,
+    },
+    speed: 2000, // More speed required for full page scroll in any device
+    keyboard: true,
+    simulateTouch: true,
+})

@@ -27,6 +27,32 @@ ul {
   list-style: none;
 }
 
+.swiper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transition: 1s;
+  opacity: 0;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  opacity: 0.3;
+  transition: 1s;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  transition: 1s;
+  position: absolute;
+}
+
 .logo {
   width: 10rem;
 }
@@ -52,7 +78,7 @@ ul {
   align-items: center;
   overflow: hidden;
   opacity: 0.2;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .header .nav:hover {
@@ -561,11 +587,6 @@ login-modal {
   align-items: flex-end;
 }
 
-
-
-
-
-
 /* Home */
 
 .bg-image {
@@ -583,4 +604,3 @@ login-modal {
   top: 50%;
   transform: translate(-100%, -50%);
 }
-
